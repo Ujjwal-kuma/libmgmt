@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'views')));
 let login = true;
 let auth  = true;
+
 app.get('/',async(req,res)=>{
     let datas = await library.find();
     res.render('index', {login:login, auth:auth, data:datas});
