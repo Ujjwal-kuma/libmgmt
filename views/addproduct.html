@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #addproduct{
+            width: 60%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            border: 1px solid rgb(145, 141, 141);
+            border-radius: 25px;
+            flex-direction: column;
+        }
+        #addproduct input,select{
+            width: 70%;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+        .addproduct-btn{
+            width: 130px;
+            height: 35px;
+            background-color: rgb(255, 50, 50);
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+        .addproduct-btn:hover{
+            background-color: rgb(136, 4, 4);
+        }
+    </style>
+</head>
+
+<body>
+    <a class="addproduct-btn" href="/">Back to Home</a>
+    <form id="addproduct" action="/add-product" method="post">
+        <label for="imglink">Image Link</label>
+        <input required type="text" name="imglink" placeholder="Image Link">
+        <label for="facultyIncharge">Faculty Incharge</label>
+        <input required name="facultyIncharge" type="text" placeholder="Product Name">
+        <label  for="technicalIncharge">Technical Incharge</label>
+        <input required name="technicalIncharge" type="text" placeholder="Brand Name">
+        <label for="labName">Lab Name</label>
+        <input required name="labName" type="text">
+        <label for="disc">Discription</label>
+        <textarea required name="disc" type="text"></textarea>
+        <button class="addproduct">Add Item</button>
+
+    </form>
+</body>
+
+</html>

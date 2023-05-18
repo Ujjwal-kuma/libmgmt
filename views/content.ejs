@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> CONTENT | E-COMMERCE WEBSITE BY EDYODA </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+
+    <link rel="stylesheet" href="css/content.css">
+    <style>
+        
+        .price-btn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price-btn button{
+            cursor: pointer;
+            height: 35px;
+            border: none;
+            background-color: rgb(255, 7, 7);
+            padding: 0 10px;
+            border-radius: 5px;
+            color: white;
+            transition: 0.5s;
+        }
+        .price-btn button:hover{
+            background-color: rgb(131, 4, 4);
+        }
+        .product-container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+        }
+        .box{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+        .box img{
+            width: 250px;
+        }
+        .box #details{
+            width: 33%;
+        }
+        .box p{
+            width: 33%;
+        }
+        span{
+            color: rgb(60, 60, 255);
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="mainContainer">
+        
+        <div id="newspapaer" class="product-container">
+            <!-- JS rendered code -->
+            <% data.forEach((element)=> { %>
+            <h1><%- element.labName %></h1>
+            <div class="box">
+                    <img class="productImg" src="<%- element.imglink %>" alt="">
+                    <div id="details">
+                        <h3><span> Faculty In Charge </span> : <%- element.facultyIncharge %></h3>
+                        <h4><span>Technical In Charge</span><%- element.technicalIncharge %></h4>
+                        
+                        <!-- <div class="price-btn">
+                            <h2>&#8377; <span><%- element.price %></span></h2>
+                            <button>Buy Now</button>
+                        </div> -->
+                    </div>
+                    <p><span>Discription </span> <br><%- element.disc %></p>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+<!-- <script src="content.js"></script> -->
+</html>
